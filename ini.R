@@ -12,7 +12,7 @@
 ## Select whether to report the details for each creature's acting summary.
 showTable = FALSE
 
-heroIniReport <- function(faction = "academy", hero = "This hero", moral = 3, knowledge = 34, haste = FALSE, benediction = FALSE, turns = 4){
+heroIniReport <- function(faction = "academy", hero = "This hero", moral = 3, knowledge = 34, haste = FALSE, benediction = FALSE, turns = 3.5){
         print("Please wait for a while...")
 
         ## The worst case for the moral of a hero with Expert Leadership is -2
@@ -177,7 +177,7 @@ armyAct <- function(creaturesList) {
 
 ## Stimulate 1000 times to get the mean and standard deviation 
 ## for the count of the acts and good morals of a single creature.
-actMean <- function(name = "This creature ", initiative, moral, totalTurns = 3.5, summary = TRUE){
+actMean <- function(name = "This creature ", initiative = 10, moral = 5, totalTurns = 3.5, summary = TRUE){
         MAcount = data.frame(CreatureName = character(), GoodMoralCount = numeric(), TotalActs = numeric())
         for (i in 1:1000){
                 MAsingle = moralCount(moral, initiative, totalTurns)
