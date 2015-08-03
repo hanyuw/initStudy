@@ -211,7 +211,7 @@ moralCount <- function(moral, initiative, totalTurns){
         moralBar = c()
         acts = 0
         atb = runif(1,0,0.25)                          ## inital atb that was assigned to the creature
-        turns = atb                                    ## total turns passed
+        turns = 0                                    ## total turns passed
         atbConsume = (1 - atb) * 10 / initiative       ## first round Counting
         turns = turns + atbConsume                     ## first round Counting
         
